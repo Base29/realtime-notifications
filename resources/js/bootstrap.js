@@ -32,3 +32,7 @@ window.Echo = new Echo({
     wsHost: window.location.hostname,
     wsPort: 6001,
 });
+
+Echo.connector.pusher.connection.bind("connected", () => {
+    console.log("connected to socket");
+});
